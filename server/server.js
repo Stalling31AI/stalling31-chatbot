@@ -34,7 +34,7 @@ app.post('/api/chat', async (req, res) => {
   const messages = [
     {
       role: "system",
-      content: `Je bent een behulpzame klantenservice medewerker van Stalling31. Beantwoord de vraag van de gebruiker op basis van de volgende kennisbank, als je het niet weet verwijs dan naar info@stalling31.nl.\n\n${faqContext}`
+      content: `Je bent een behulpzame klantenservice medewerker van Stalling31. Beantwoord de vraag van de gebruiker op basis van de volgende kennisbank, als je het niet weet verwijs dan naar klantenservice@stalling31.nl.\n\n${faqContext}`
     },
     {
       role: "user",
