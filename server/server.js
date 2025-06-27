@@ -2,9 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const OpenAI = require('openai');
+const cors = require('cors');
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
