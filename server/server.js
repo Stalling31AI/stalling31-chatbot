@@ -10,7 +10,7 @@ app.use(express.static('public'));
 const configuration = new Configuration({ apiKey: process.env.OPENAI_API_KEY });
 const openai = new OpenAIApi(configuration);
 
-const systemPrompt = fs.readFileSync('./server/system_prompt.txt', 'utf8');
+const systemPrompt = fs.readFileSync(__dirname + '/system_prompt.txt', 'utf8');
 
 app.post('/api/chat', async (req, res) => {
   const userMessage = req.body.message;
